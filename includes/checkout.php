@@ -17,8 +17,7 @@ if( !$product || !$product_qnty || 0 === $product_qnty || $product_name  ){
     header("Location: ../index.php");
 }
 
-//$stripe_secret_key = "your Stripe secret key here";
-$stripe_secret_key = "sk_test_51P7iuLSIOu5YRmW5L2JIINvREuUswg5U36kNvjBs2egFGE4rA4qK5S4aR5AfU9kHCg0X67Xqt5Z4kElOVKoF2qM300y11Wuzjz";
+$stripe_secret_key = "your Stripe secret key here";
 \Stripe\Stripe::setApiKey($stripe_secret_key);
 
 $checkout_session = \Stripe\Checkout\Session::create([
