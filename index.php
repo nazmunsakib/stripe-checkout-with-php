@@ -2,7 +2,7 @@
     
     <div class="stripe-checkout-wrapper">
         <div class="product-purchase-area">
-            <h1><?php echo "Shop"; ?></h1>
+            <h1><?php echo "Stripe Checkout Pay!"; ?></h1>
             <form action="includes/checkout.php" method="post">
                 <label for="fname"><?php echo "Product"; ?></label>
                 <select name="product" id="product" required>
@@ -16,6 +16,9 @@
 
                 <label for="price"><?php echo "Price"; ?></label>
                 <input type="number" id="price" name="price" readonly>
+
+                <label for="total_price"><?php echo "Total Price"; ?></label>
+                <input type="number" id="total_price" name="total_price" readonly>
 
                 <button type="submit"><?php echo "Purchase"; ?></button>
             </form>
